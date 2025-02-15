@@ -1,0 +1,21 @@
+/* Correct usage of calc() */
+#element1 {
+  width: calc(100% - 20px);
+}
+
+/* Correctly nested calc() */
+#element2 {
+  width: calc(50% - calc(10px + 5px));
+}
+
+/* Correct unit handling */
+#element3 {
+  width: calc(100% - 20px);
+  font-size: calc(1em + 10px); /* Correct mixing units */
+}
+
+/*Avoid these errors:
+Incorrect spacing: width:calc(100% - 20px)
+Missing multiplication operator: width:calc(2*10px)   (should be width:calc(2 * 10px))
+Inconsistent unit usage: width: calc(100% - 10em + 20px); (units should be consistent or properly converted)
+*/
